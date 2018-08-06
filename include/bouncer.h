@@ -361,6 +361,7 @@ struct PgDatabase {
 	const char *dbname;	/* server-side name, pointer to inside startup_msg */
 	PgUser *forced_user;	/* if not NULL, the user/psw is forced */
 	PgUser *auth_user;	/* if not NULL, users not in userlist.txt will be looked up on the server */
+	const char *auth_dbname; /* is the database used for authentication */
 
 	/*
 	 * run-time state
